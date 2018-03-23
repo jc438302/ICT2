@@ -1,0 +1,165 @@
+/* main.css */
+body, html {
+	background-image:url(images/back3.png)
+ 
+	}
+
+.bg {
+    /* The image used */
+  
+
+    /* Full height */
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+body {
+	font-family: comic ;
+	
+	
+}
+
+
+.container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.container img 
+{
+	
+    width: 60%;
+	
+    padding: 10px;
+	
+	}
+
+.container .content {
+    position: absolute;
+    bottom: 0;
+   margin-right:70%;
+    color: #f1f1f1;
+    width: 50%;
+    padding: 20px;
+}
+div.wrapper {
+	margin: 0 auto;
+}
+
+header { 
+ 
+
+	background-image: url(images/main.jpg);
+	
+	
+	position: bottom;
+	height: 120px;
+	width: 100%;
+	padding-right:5px;
+} 
+ header h1 {
+	font-family: 'Love Ya Like A Sister', georgia;
+	letter-spacing: 4px;
+	font-size: 72px;
+	padding-top: .5em;
+	padding-left: .5em;
+} 
+h1
+{
+	float:right;
+	margin-right:100px;
+	margin-top:60px;
+	
+	
+}
+nav
+{
+	width:100%;
+}
+
+
+nav ul {
+	
+	margin-bottom: 40px;
+	width:100%;
+	padding: 0;
+	
+}
+nav ul li {
+	list-style: none;
+	float: left;
+	font-size: 20px;
+}
+nav ul li a {
+	display: block;
+	font-weight: bold;
+	padding: .625em 4.62em; 
+	text-decoration: none;
+	color: #000;
+	background-color: white;
+}
+
+footer {
+		clear: both;
+		margin-top:10px;
+}
+
+footer h3 {
+	
+	background-color:white;
+	padding: .5em 0 .5em .5em;
+	background-repeat: repeat-x;
+	position: bottom;
+	margin-top: 100px;
+}
+.dropbtn {
+	background-color:inherit;
+	font-weight: bold;
+  
+   cursor: pointer;
+   padding: .500em 3.5em; /* 10px 15px */
+	text-decoration: none;
+	color: #000;
+	
+}
+
+
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+   
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px;
+    z-index: 1;
+    
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    background-color: #f9f9f9;
+}
+
+
+/* Show the dropdown menu on hover */
+.dropdown:hover 
+.dropdown-content {
+    display: block;
+}
+
+iframe {
+    margin-top: 1000px;
+    margin-bottom: 100px;
+    margin-right: 150px;
+    margin-left: 200px;
+}
+
+

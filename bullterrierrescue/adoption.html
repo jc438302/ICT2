@@ -1,0 +1,627 @@
+<html>
+<head>
+<title>Bull Terrier Rescue</title>
+<link href="mystyle.css" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Love+Ya+Like+A+Sister" rel="stylesheet" type="text/css">
+<link href="main.css" rel="stylesheet">
+
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="responsive.css" rel="stylesheet"  media="screen and
+(max-width: 960px)">
+<script>
+	function checkRePassword(document) {	
+	  var pwd = document.getElementById("password");
+  	  var pwd_msg = document.getElementById('pwd_msg');
+	  var repwd = document.getElementById("rePassword");	  
+	  if (pwd.value != repwd.value) {
+		pwd_msg.innerHTML = "The two passwords are not the same.";
+		repwd.value = "";
+		pwd.focus();
+		return false;
+	  }
+	  else {
+		pwd_msg.innerHTML = "";  
+	  }  
+	  return true;
+	}	
+
+	function checkZIPCode(document) {
+	  var zip = document.getElementById("zip");
+	  var zip_msg = document.getElementById("zip_msg");
+	  var isNum = /^[0-9]{4}$/.test(zip.value); // 4 digits
+	  if(!isNum) {
+		zip_msg.innerHTML = "4 digits are required.";
+		zip.focus();
+		return false;
+	  }
+	  else {
+		zip_msg.innerHTML = "";  
+	  }  
+	  return true;		
+	}
+
+	function validateInfo(document) { 
+	  if ( checkRePassword(document) && checkZIPCode(document) )
+	  { 
+		return true;
+	  }
+	  return false;
+	}
+	
+	function changeYellowColor(id) {
+		document.getElementById(id).style.backgroundColor = "yellow";
+	}
+
+	function changeWhiteColor(id) {
+		document.getElementById(id).style.backgroundColor = "white";
+	}
+	
+	function reset_frm(document) {
+		document.getElementById('pwd_msg').innerHTML = "";
+		document.getElementById("zip_msg").innerHTML = "";	
+	}
+		
+</script>
+</head>
+<body>
+
+<div class="wrapper">
+<img src="images/logo.png"height="150" width="150">
+<h1><font size="+6">Bull Terrier Rescue</font></h1>
+
+<nav>
+
+			<ul>
+			<li><a href="index.php">Home</a></li>
+			<li><a href="about us.html">About us</a></li>
+           <li><a href="dogs_available.html">Dogs Available </a></li>
+			<li><a href="adoption.html">Adoption</a></li>
+			 <li><a href="ourbreed.html">Our Breed</a></li>
+			<li><a href="contact us.html">Contact Us</a></li>
+           
+			</ul>		
+			
+		
+</nav>
+</header><br><br><br>
+<center><h2>Adoption Application Form</h2></center>
+<br><br>
+
+<p>
+These questions are aimed at making sure you understand the extra responsibilities that come with caring for a bull terrier and to assist us in placing the right bull terrier with you. 
+<br><br>Please ensure you include all relevant information in this application. Only that information which is provided in this application will be considered in assessing suitability of your chosen bull terrier(s).
+</p>
+<h3> Name of dog you are enquiring about?</h3>
+<form>
+<input type="text" value=""><br>If Applicable
+<h2>Personal Information</h2>
+<h3>Full Name</h3>
+Prefix
+<input type="text" id="prefix" name="prefix" size="35" maxlength="3" 
+            	onBlur="changeWhiteColor(id)"
+                onFocus="changeYellowColor(id)" required>
+First Name
+<input type="text" id="first name" name="name" size="35" maxlength="50" 
+            	onBlur="changeWhiteColor(id)"
+                onFocus="changeYellowColor(id)" required>
+Last name
+<input type="text" id="last name" name="last name" size="35" maxlength="50" 
+            	onBlur="changeWhiteColor(id)"
+                onFocus="changeYellowColor(id)" required>
+
+<h3>Email</h3>
+<input type="text" id="email" name="email" size="35" maxlength="50" 
+            	onBlur="changeWhiteColor(id)"
+                onFocus="changeYellowColor(id)" required>
+<h3>Gender:</h3>
+<input type="radio"  name="gender" value="male">Male
+<input type="radio"  name="gender" value="female">Female<br>
+<h3>Mobile Number:</h3>
+<input type="text" id="mobile number" name="mobile number" size="35" maxlength="10" 
+            	onBlur="changeWhiteColor(id)"
+                onFocus="changeYellowColor(id)" required>
+<h3>Address</h3>
+Street Address
+<input type="text" id="address" name="address" size="35" maxlength="50"
+            	onBlur="changeWhiteColor(id)"
+                onFocus="changeYellowColor(id)" required /><br>
+Street Address line 2
+<input type="text" id="street addressline 2" name="street address line 2" size="35" maxlength="50"
+            	onBlur="changeWhiteColor(id)"
+                onFocus="changeYellowColor(id)" required /><br>
+City
+<input type="text" id="text" name="city" size="35" maxlength="50"
+            	onBlur="changeWhiteColor(id)"
+                onFocus="changeYellowColor(id)" required /><br>
+
+State<select class="form-dropdown validate[required] form-address-country form-validation-error" name="q10_address10[state]" id="input_10_state" data-component="state" required>
+                      <option value=""> Please Select </option>
+                      <option value="United States"> QLD </option>
+                      <option value="Afghanistan"> NSW </option>
+                      <option value="Albania"> VIC </option>
+                      <option value="Algeria"> ATC </option>
+                      <option value="American Samoa"> WA </option>
+                      <option value="Andorra"> SA </option>
+                      <option value="Angola"> Tasmania </option></select><br>
+                      
+Postal Code
+<input type="text" id="postal code" name="postal code" size="35" maxlength="50"
+            	onBlur="changeWhiteColor(id)"
+                onFocus="changeYellowColor(id)" required /><br>
+
+Country<select class="form-dropdown validate[required] form-address-country form-validation-error" name="q10_address10[country]" id="input_10_country" data-component="country" required>
+                      <option value=""> Please Select </option>
+                      <option value="United States"> United States </option>
+                      <option value="Afghanistan"> Afghanistan </option>
+                      <option value="Albania"> Albania </option>
+                      <option value="Algeria"> Algeria </option>
+                      <option value="American Samoa"> American Samoa </option>
+                      <option value="Andorra"> Andorra </option>
+                      <option value="Angola"> Angola </option>
+                      <option value="Anguilla"> Anguilla </option>
+                      <option value="Antigua and Barbuda"> Antigua and Barbuda </option>
+                      <option value="Argentina"> Argentina </option>
+                      <option value="Armenia"> Armenia </option>
+                      <option value="Aruba"> Aruba </option>
+                      <option value="Australia"> Australia </option>
+                      <option value="Austria"> Austria </option>
+                      <option value="Azerbaijan"> Azerbaijan </option>
+                      <option value="The Bahamas"> The Bahamas </option>
+                      <option value="Bahrain"> Bahrain </option>
+                      <option value="Bangladesh"> Bangladesh </option>
+                      <option value="Barbados"> Barbados </option>
+                      <option value="Belarus"> Belarus </option>
+                      <option value="Belgium"> Belgium </option>
+                      <option value="Belize"> Belize </option>
+                      <option value="Benin"> Benin </option>
+                      <option value="Bermuda"> Bermuda </option>
+                      <option value="Bhutan"> Bhutan </option>
+                      <option value="Bolivia"> Bolivia </option>
+                      <option value="Bosnia and Herzegovina"> Bosnia and Herzegovina </option>
+                      <option value="Botswana"> Botswana </option>
+                      <option value="Brazil"> Brazil </option>
+                      <option value="Brunei"> Brunei </option>
+                      <option value="Bulgaria"> Bulgaria </option>
+                      <option value="Burkina Faso"> Burkina Faso </option>
+                      <option value="Burundi"> Burundi </option>
+                      <option value="Cambodia"> Cambodia </option>
+                      <option value="Cameroon"> Cameroon </option>
+                      <option value="Canada"> Canada </option>
+                      <option value="Cape Verde"> Cape Verde </option>
+                      <option value="Cayman Islands"> Cayman Islands </option>
+                      <option value="Central African Republic"> Central African Republic </option>
+                      <option value="Chad"> Chad </option>
+                      <option value="Chile"> Chile </option>
+                      <option value="China"> China </option>
+                      <option value="Christmas Island"> Christmas Island </option>
+                      <option value="Cocos (Keeling) Islands"> Cocos (Keeling) Islands </option>
+                      <option value="Colombia"> Colombia </option>
+                      <option value="Comoros"> Comoros </option>
+                      <option value="Congo"> Congo </option>
+                      <option value="Cook Islands"> Cook Islands </option>
+                      <option value="Costa Rica"> Costa Rica </option>
+                      <option value="Cote d'Ivoire"> Cote d'Ivoire </option>
+                      <option value="Croatia"> Croatia </option>
+                      <option value="Cuba"> Cuba </option>
+                      <option value="Cyprus"> Cyprus </option>
+                      <option value="Czech Republic"> Czech Republic </option>
+                      <option value="Democratic Republic of the Congo"> Democratic Republic of the Congo </option>
+                      <option value="Denmark"> Denmark </option>
+                      <option value="Djibouti"> Djibouti </option>
+                      <option value="Dominica"> Dominica </option>
+                      <option value="Dominican Republic"> Dominican Republic </option>
+                      <option value="Ecuador"> Ecuador </option>
+                      <option value="Egypt"> Egypt </option>
+                      <option value="El Salvador"> El Salvador </option>
+                      <option value="Equatorial Guinea"> Equatorial Guinea </option>
+                      <option value="Eritrea"> Eritrea </option>
+                      <option value="Estonia"> Estonia </option>
+                      <option value="Ethiopia"> Ethiopia </option>
+                      <option value="Falkland Islands"> Falkland Islands </option>
+                      <option value="Faroe Islands"> Faroe Islands </option>
+                      <option value="Fiji"> Fiji </option>
+                      <option value="Finland"> Finland </option>
+                      <option value="France"> France </option>
+                      <option value="French Polynesia"> French Polynesia </option>
+                      <option value="Gabon"> Gabon </option>
+                      <option value="The Gambia"> The Gambia </option>
+                      <option value="Georgia"> Georgia </option>
+                      <option value="Germany"> Germany </option>
+                      <option value="Ghana"> Ghana </option>
+                      <option value="Gibraltar"> Gibraltar </option>
+                      <option value="Greece"> Greece </option>
+                      <option value="Greenland"> Greenland </option>
+                      <option value="Grenada"> Grenada </option>
+                      <option value="Guadeloupe"> Guadeloupe </option>
+                      <option value="Guam"> Guam </option>
+                      <option value="Guatemala"> Guatemala </option>
+                      <option value="Guernsey"> Guernsey </option>
+                      <option value="Guinea"> Guinea </option>
+                      <option value="Guinea-Bissau"> Guinea-Bissau </option>
+                      <option value="Guyana"> Guyana </option>
+                      <option value="Haiti"> Haiti </option>
+                      <option value="Honduras"> Honduras </option>
+                      <option value="Hong Kong"> Hong Kong </option>
+                      <option value="Hungary"> Hungary </option>
+                      <option value="Iceland"> Iceland </option>
+                      <option value="India"> India </option>
+                      <option value="Indonesia"> Indonesia </option>
+                      <option value="Iran"> Iran </option>
+                      <option value="Iraq"> Iraq </option>
+                      <option value="Ireland"> Ireland </option>
+                      <option value="Israel"> Israel </option>
+                      <option value="Italy"> Italy </option>
+                      <option value="Jamaica"> Jamaica </option>
+                      <option value="Japan"> Japan </option>
+                      <option value="Jersey"> Jersey </option>
+                      <option value="Jordan"> Jordan </option>
+                      <option value="Kazakhstan"> Kazakhstan </option>
+                      <option value="Kenya"> Kenya </option>
+                      <option value="Kiribati"> Kiribati </option>
+                      <option value="North Korea"> North Korea </option>
+                      <option value="South Korea"> South Korea </option>
+                      <option value="Kosovo"> Kosovo </option>
+                      <option value="Kuwait"> Kuwait </option>
+                      <option value="Kyrgyzstan"> Kyrgyzstan </option>
+                      <option value="Laos"> Laos </option>
+                      <option value="Latvia"> Latvia </option>
+                      <option value="Lebanon"> Lebanon </option>
+                      <option value="Lesotho"> Lesotho </option>
+                      <option value="Liberia"> Liberia </option>
+                      <option value="Libya"> Libya </option>
+                      <option value="Liechtenstein"> Liechtenstein </option>
+                      <option value="Lithuania"> Lithuania </option>
+                      <option value="Luxembourg"> Luxembourg </option>
+                      <option value="Macau"> Macau </option>
+                      <option value="Macedonia"> Macedonia </option>
+                      <option value="Madagascar"> Madagascar </option>
+                      <option value="Malawi"> Malawi </option>
+                      <option value="Malaysia"> Malaysia </option>
+                      <option value="Maldives"> Maldives </option>
+                      <option value="Mali"> Mali </option>
+                      <option value="Malta"> Malta </option>
+                      <option value="Marshall Islands"> Marshall Islands </option>
+                      <option value="Martinique"> Martinique </option>
+                      <option value="Mauritania"> Mauritania </option>
+                      <option value="Mauritius"> Mauritius </option>
+                      <option value="Mayotte"> Mayotte </option>
+                      <option value="Mexico"> Mexico </option>
+                      <option value="Micronesia"> Micronesia </option>
+                      <option value="Moldova"> Moldova </option>
+                      <option value="Monaco"> Monaco </option>
+                      <option value="Mongolia"> Mongolia </option>
+                      <option value="Montenegro"> Montenegro </option>
+                      <option value="Montserrat"> Montserrat </option>
+                      <option value="Morocco"> Morocco </option>
+                      <option value="Mozambique"> Mozambique </option>
+                      <option value="Myanmar"> Myanmar </option>
+                      <option value="Nagorno-Karabakh"> Nagorno-Karabakh </option>
+                      <option value="Namibia"> Namibia </option>
+                      <option value="Nauru"> Nauru </option>
+                      <option value="Nepal"> Nepal </option>
+                      <option value="Netherlands"> Netherlands </option>
+                      <option value="Netherlands Antilles"> Netherlands Antilles </option>
+                      <option value="New Caledonia"> New Caledonia </option>
+                      <option value="New Zealand"> New Zealand </option>
+                      <option value="Nicaragua"> Nicaragua </option>
+                      <option value="Niger"> Niger </option>
+                      <option value="Nigeria"> Nigeria </option>
+                      <option value="Niue"> Niue </option>
+                      <option value="Norfolk Island"> Norfolk Island </option>
+                      <option value="Turkish Republic of Northern Cyprus"> Turkish Republic of Northern Cyprus </option>
+                      <option value="Northern Mariana"> Northern Mariana </option>
+                      <option value="Norway"> Norway </option>
+                      <option value="Oman"> Oman </option>
+                      <option value="Pakistan"> Pakistan </option>
+                      <option value="Palau"> Palau </option>
+                      <option value="Palestine"> Palestine </option>
+                      <option value="Panama"> Panama </option>
+                      <option value="Papua New Guinea"> Papua New Guinea </option>
+                      <option value="Paraguay"> Paraguay </option>
+                      <option value="Peru"> Peru </option>
+                      <option value="Philippines"> Philippines </option>
+                      <option value="Pitcairn Islands"> Pitcairn Islands </option>
+                      <option value="Poland"> Poland </option>
+                      <option value="Portugal"> Portugal </option>
+                      <option value="Puerto Rico"> Puerto Rico </option>
+                      <option value="Qatar"> Qatar </option>
+                      <option value="Republic of the Congo"> Republic of the Congo </option>
+                      <option value="Romania"> Romania </option>
+                      <option value="Russia"> Russia </option>
+                      <option value="Rwanda"> Rwanda </option>
+                      <option value="Saint Barthelemy"> Saint Barthelemy </option>
+                      <option value="Saint Helena"> Saint Helena </option>
+                      <option value="Saint Kitts and Nevis"> Saint Kitts and Nevis </option>
+                      <option value="Saint Lucia"> Saint Lucia </option>
+                      <option value="Saint Martin"> Saint Martin </option>
+                      <option value="Saint Pierre and Miquelon"> Saint Pierre and Miquelon </option>
+                      <option value="Saint Vincent and the Grenadines"> Saint Vincent and the Grenadines </option>
+                      <option value="Samoa"> Samoa </option>
+                      <option value="San Marino"> San Marino </option>
+                      <option value="Sao Tome and Principe"> Sao Tome and Principe </option>
+                      <option value="Saudi Arabia"> Saudi Arabia </option>
+                      <option value="Senegal"> Senegal </option>
+                      <option value="Serbia"> Serbia </option>
+                      <option value="Seychelles"> Seychelles </option>
+                      <option value="Sierra Leone"> Sierra Leone </option>
+                      <option value="Singapore"> Singapore </option>
+                      <option value="Slovakia"> Slovakia </option>
+                      <option value="Slovenia"> Slovenia </option>
+                      <option value="Solomon Islands"> Solomon Islands </option>
+                      <option value="Somalia"> Somalia </option>
+                      <option value="Somaliland"> Somaliland </option>
+                      <option value="South Africa"> South Africa </option>
+                      <option value="South Ossetia"> South Ossetia </option>
+                      <option value="South Sudan"> South Sudan </option>
+                      <option value="Spain"> Spain </option>
+                      <option value="Sri Lanka"> Sri Lanka </option>
+                      <option value="Sudan"> Sudan </option>
+                      <option value="Suriname"> Suriname </option>
+                      <option value="Svalbard"> Svalbard </option>
+                      <option value="Swaziland"> Swaziland </option>
+                      <option value="Sweden"> Sweden </option>
+                      <option value="Switzerland"> Switzerland </option>
+                      <option value="Syria"> Syria </option>
+                      <option value="Taiwan"> Taiwan </option>
+                      <option value="Tajikistan"> Tajikistan </option>
+                      <option value="Tanzania"> Tanzania </option>
+                      <option value="Thailand"> Thailand </option>
+                      <option value="Timor-Leste"> Timor-Leste </option>
+                      <option value="Togo"> Togo </option>
+                      <option value="Tokelau"> Tokelau </option>
+                      <option value="Tonga"> Tonga </option>
+                      <option value="Transnistria Pridnestrovie"> Transnistria Pridnestrovie </option>
+                      <option value="Trinidad and Tobago"> Trinidad and Tobago </option>
+                      <option value="Tristan da Cunha"> Tristan da Cunha </option>
+                      <option value="Tunisia"> Tunisia </option>
+                      <option value="Turkey"> Turkey </option>
+                      <option value="Turkmenistan"> Turkmenistan </option>
+                      <option value="Turks and Caicos Islands"> Turks and Caicos Islands </option>
+                      <option value="Tuvalu"> Tuvalu </option>
+                      <option value="Uganda"> Uganda </option>
+                      <option value="Ukraine"> Ukraine </option>
+                      <option value="United Arab Emirates"> United Arab Emirates </option>
+                      <option value="United Kingdom"> United Kingdom </option>
+                      <option value="Uruguay"> Uruguay </option>
+                      <option value="Uzbekistan"> Uzbekistan </option>
+                      <option value="Vanuatu"> Vanuatu </option>
+                      <option value="Vatican City"> Vatican City </option>
+                      <option value="Venezuela"> Venezuela </option>
+                      <option value="Vietnam"> Vietnam </option>
+                      <option value="British Virgin Islands"> British Virgin Islands </option>
+                      <option value="Isle of Man"> Isle of Man </option>
+                      <option value="US Virgin Islands"> US Virgin Islands </option>
+                      <option value="Wallis and Futuna"> Wallis and Futuna </option>
+                      <option value="Western Sahara"> Western Sahara </option>
+                      <option value="Yemen"> Yemen </option>
+                      <option value="Zambia"> Zambia </option>
+                      <option value="Zimbabwe"> Zimbabwe </option>
+                      <option value="other"> Other </option>
+                    </select>
+<h2>Municipality/Council</h2>
+ <input type="text" value="">
+ <h3> 1. Please tell us how long you owned your previous dog and what happened to it?</h3>
+  <input type="text" value="">
+<h3> 2. Are there any circumstances where you might not be willing to adopt a dog? i.e. Behaviour problems.</h3>
+ <input type="text" value="">
+<h3> 3. If you are not enquiring about a particular dog, please give sex and age of dog you would be interested in adopting.</h3>
+ <input type="text" value="">
+<h3> 4. Why do you want to adopt a dog, eg companion for yourself /other pet / for children / watchdog?</h3>
+<input type="text" value="">
+<h3> 5. Have you ever taken an animal to a shelter or released it to another party?</h3>
+<input type="text" value="">
+<h3>6. Would you be willing to allow a representative to make a home visit at a mutually agreed time? Please note: A property inspection is required prior to adoption, to ensure the safety of your new Bull Terrier.</h3>
+<input type="text" value="">
+<h3>7. Do you own your home? If you are renting, please provide us with your landlord's written verification that a dog is permitted:</h3>
+<input type="text" value="">
+<h3> 8. Please provide an Emergency Contact *</h3>
+First Name:<input type="text" value="">
+Last Name:<input type="text" value="">
+<h3>Emergency Mobile Number *</h3>
+Area Code:<input type="text" value="">
+Phone Number:<input type="text" value="">
+<h3>Phone Number</h3>
+Area Code:<input type="text" value="">
+Phone Number:<input type="text" value="">
+<h3>E-mail</h3>
+<input type="email" id="input_30" name="q30_email30" class="form-textbox validate[Email]" size="30" value="" placeholder="ex: myname@example.com" data-component="email">
+<h3>Address - if different to above</h3>
+<input type="text" value=""><br>Street Address<br><br>
+<input type="text" value=""><br>Street Address line 2<br><br>
+City:<input type="text" value="">
+State/Province<input type="number" value=""><br><br>
+Postal Code<input type="number" value="">
+Country<input type="" value="">
+<h3>9. Do you currently have a vet? If so, please provide us their name and phone number so we can contact them for a reference, together with one personal referee. If you do not have a vet please provide two personal references. We reserve the right to contact these referees should the application proceed.</h3>
+<input type="text" value="">
+<h3>Vet Name</h3>
+<input type="text" value="">
+<h3>Vet Phone Number</h3>
+Area Code:<input type="text" value="">
+Phone Number:<input type="text" value="">
+vet-email<input type="email" value="">
+<h3>Referee 1 Full Name</h3>
+First Name:<input type="text" value="">
+Last Name:<input type="text" value="">
+<h3>Phone Number</h3>
+Area Code:<input type="text" value="">
+Phone Number:<input type="text" value="">
+<h3>E-mail</h3>
+<input type="email" value="email"><br>
+<h3> 10. Is there anything else you would like to tell us about you, your family or your interest in adopting a bull terrier? The more information you provide, the better we will be able to determine suitability of a particular dog.</h3>
+<input type="text" value="">
+<h2>Your Home</h2>
+<h3> 11. Number of people living at premises?</h3>
+<input type="text" value="">
+<h3> 12. Ages if under twenty five?</h3>
+<input type="text" value="">
+<h3> 13. Will your new dog have regular contact with children 5 years or under (own children, grandchildren, visiting children) or elderly people.</h3>
+<input type="text" value="">
+<h3> 14. Do you currently have any pets? Please give breed, size, sex and age.</h3>
+<input type="text" value="">
+<h3>15. If you have a dog(s) are they: Desexed?</h3>
+<input type="text" value="">
+<h3> Registered?</h3>
+<input type="text" value="">
+<h3>Microchipped?</h3>
+<input type="text" value="">
+<h3>C5 Vaccinated?</h3>
+<input type="text" value=""> 
+<h3>Insured?</h3>
+<input type="text" value="">
+<h3> 16. Where do your current pets sleep? Where will the new dog sleep? Please be specific eg kennel, verandah, laundry. If inside, which room?</h3>
+<input type="text" value="">
+<h3> 17. Which areas of the house will your new Bull Terrier have access to, eg backyard and laundry/ kitchen/non-carpeted/other areas? Do you have a doggie door? Are there any areas which are off limits?</h3>
+<input type="text" value="">
+<h3> 18. Is your yard securely fenced? Describe type of fencing (wooden, colourbond, wire etc) and height at the lowest point. If you have a swimming pool is it separately fenced?</h3>
+<input type="text" value="">
+<h3>19. If no-one is at home, where will your new dog stay? Inside or Outside? If the dog is outside, what type of shelter will the dog have?</h3>
+<input type="text" value="">
+<h3> 20. How many hours will the new dog be without human company for each day?</h3>
+<input type="text" value="">
+<h3>21. How many dogs are you allowed by your Council?</h3>
+<input type="text" value="">
+<h2>Breed Knowledge & Experience</h2>
+<h4>Bull Terriers are a strong powerful breed and can be dominating. They require their master to be of a calm and assertive demeanour and to have patience, while rules, boundaries and routines are being established.</h4>
+<h3>22. How will your new Bull Terrier be introduced to your human family members? What specific steps will you take to integrate them?</h3>
+<input type="text" value="">
+<h3>23. How will your new Bull Terrier be introduced to your existing pets? What specific steps will you take to integrate them?</h3>
+<input type="text" value="">
+<h3>24. Please tell us what breeds of dogs have you previously owned and have you ever owned a bull terrier?</h3>
+<input type="text" value="">
+<h3> 25. Please tell us what research have you undertaken to find out more about the bull terrier breed?</h3>
+<input type="text" value="">
+<h3>26. Please tell us how often will you have time to walk your new dog? How long for? On lead or off lead?</h3>
+<input type="text" value="">
+<h3>27. There is usually an adjustment period, until a new dog settles in, how do you plan to make your new dog feel at ease and how will you cope with the possible complications that may arise?</h3>
+<input type="text" value="">
+<h3>28. Under what circumstance would you give up your new dog, e.g. family illness, barking, digging, shedding, allergic to dog, destructive chewing, biting, growling, moving house, reactivity on lead, lack of housetraining, cost of food/care?</h3>
+<input type="text" value="">
+<h2>QLDBTR Adoption Terms & Conditions</h2>
+I agree that this bull terrier is being adopted for myself and will not be sold, adopted, or given to another party.
+
+I agree that this dog will not be allowed off my premises unsupervised. When taking this dog out or travelling by car, I shall remain vigilant and he/she will be secured by a harness and/or collar and lead and will wear an ID tag.
+
+I agree that this dog will be a companion animal and will live as part of my family, he/she will not be used as a guard or hunting dog.
+
+I agree to care for this dog in a humane manner. This includes providing adequate, food, water, shelter, attention and veterinary care.
+
+I understand and agree, that it is a QLD Bull Terrier Rescue requirement that this dog is desexed prior to adoption.
+
+I have read, understood and will abide by the Foster/Adoption Guidelines provided on the QLDBTR website.
+
+I agree that if I have any training issues or difficulties with this dog, I will contact QLD Bull Terrier Rescue for advice.
+
+I agree that if this dog is rehomed as an only pet, I will not attempt to bring other animals into the home.
+
+If this dog is rehomed with another pet, I agree to carefully supervise them when they are together and will not leave them alone together until I am sure that there will be no conflict.
+
+<br><br>I agree to keep QLD Bull Terrier Rescue updated with my current contact details.
+
+I agree that if at any point I am unable to keep this dog, I will return him/her to QLD Bull Terrier Rescue, without requesting a fee.
+
+I agree that there will be a minimum of a two week trial period, longer if rehoming with other animals. During this time I shall take full responsibility for the bull terrier and will abide by the QLDBTR guidelines, terms and conditions.
+
+I understand and agree, that although every dog adopted has been tested for temperament & behaviour, I agree to take on trial/adopt the named dog at my own risk and indemnify and release QLD Bull Terrier Rescue, its director and volunteers, of any and all liability arising from damages to person(s) or property caused by the dog.
+
+I agree that all statements on this form are true. If it is found that any statements are untrue, the adopted dog may be confiscated.
+
+<br><br><b>I have read and fully understand the Terms and Conditions of this agreement and agree that it is not arbitrary and that provisions herein, are common in pet adoption agreements. I further understand, that if I fail to comply with any of the Terms specified herein, QLD Bull Terrier Rescue has the right to reclaim the dog and to enforce this contract in a court of law.</b>
+<h3>Applicant Name</h3>
+First Name:<input type="text" value="">
+Last Name:<input type="text" value="">
+<h3>Date</h3>
+Day:<input type="date" value="">
+Month:<input type="date" value="">
+Year:<input type="date" value="">
+<li class="form-line" data-type="control_signature" id="id_77">
+
+        <label class="form-label form-label-top form-label-auto" id="label_77" for="input_77"> Signature </label>
+        <div id="cid_77" class="form-input-wide">
+          <div data-wrapper-react="true">
+            <div id="signature_pad_77" class="signature-pad-wrapper" style="width:402px;height:202px;">
+              <div data-wrapper-react="true">
+                <!--[if IE 7]>
+                  <script type="text/javascript" src="/js/vendor/json2.js"></script>
+                <![endif]-->
+              </div>
+              <div class="signature-line signature-wrapper" data-component="signature" style="width:402px;height:202px;">
+                <div id="sig_pad_77" data-width="400" data-height="200" data-id="77" data-required="false" class="pad" style="width: 400px; height: 200px;">
+                <div style="padding:0 !important; margin:0 !important;width: 100% !important; height: 0 !important; -ms-touch-action: none;margin-top:-1em !important; margin-bottom:1em !important;"></div><canvas class="jSignature" width="400" height="200" style="margin: 0px; padding: 0px; border: none; height: 200px; width: 400px;"></canvas><div style="padding:0 !important; margin:0 !important;width: 100% !important; height: 0 !important; -ms-touch-action: none;margin-top:-1.5em !important; margin-bottom:1.5em !important; position: relative;"></div></div>
+                <input type="hidden" name="q77_signature77" class="output4" id="input_77" value="">
+              </div>
+              <span class="clear-pad-btn clear-pad">
+                Clear
+              </span>
+            </div>
+            <div data-wrapper-react="true">
+              <script type="text/javascript">
+              window.signatureForm = true
+              </script>
+            </div>
+          </div>
+        </div>
+      </li>
+<h3>Signature</h3>
+
+<canvas class="jSignature" width="400" height="200" style="margin: 0px; padding: 0px; border: none; height: 200px; width: 400px;"></canvas>
+<div style="padding:0 !important; margin:0 !important;width: 100% !important; height: 0 !important; -ms-touch-action: none;margin-top:-1.5em !important; margin-bottom:1.5em !important; position: relative;"></div>
+<input type="hidden" name="q77_signature77" class="output4" id="input_77" value="data:image/png;base64,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">
+<span class="clear-pad-btn clear-pad">
+                Clear
+              </span>
+<input type="text" value=""><u>Clear</u>
+<h3>QLDBTR Representative</h3>
+First Name:<input type="text" value="">
+Last Name:<input type="text" value="">
+<h3>Adoption Date</h3>
+<input type="text" value=""> 
+<h3>Transported By</h3>
+<input type="text" value=""> 
+<h3>Interstate Adoption From - To</h3>
+<input type="text" value=""> 
+<h3>Name of Bull Terrier</h3>
+<input type="text" value=""> 
+<h3>Sex</h3>
+<input type="text" value=""> 
+<h3>Age or Birth Date</h3>
+<input type="text" value=""> 
+<h3>Colour</h3>
+<input type="text" value=""> 
+<h3>Distinctive Markings</h3>
+<input type="text" value="">
+<h5>By submitting this form, you are agreeing to the above Terms & Conditions.</h5>
+<h3>Microchip Number</h3>
+<input type="text" value=""> 
+<h3>Click to edit</h3>
+<input type="text" value=""><br><br>
+<input type="Submit" value="Submit">
+</form>
+
+
+
+<footer><h3>What we do<br>
+<a href="about us.html">About Us</a>
+<br>
+<a href="about us.html">Adopt a dog</a>
+<br>
+<a href="about us.html">Dogs Available</a>
+<br>
+<a href="about us.html">Our Breed</a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<font size="+3" color="blue"><center>Bull Terrier Rescue</center></font>
+
+<font size="+1" color="blue"><a href="admin.html">admin</a></font>
+
+</h3>
+
+
+</footer>
+
+
+
+</div>  
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Admin Panel</title>
+<style>
+body{
+   margin: 0px;
+   border: 0px;
+}
+#header{
+	width:100%;
+	height:120px;
+	background: black;
+	color: white;
+	
+}
+#sidebar{
+	width: 300px;
+	height: 400px;
+	background: green;
+	float:left;
+}
+#data{
+	height: 700px;
+	background:grey;
+	color:white;
+	font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+	font-size:24px;
+	}
+ul li {
+	padding: 20px;
+	border-bottom:2px solid grey;
+}
+	ul li: hover {
+		background:url(file:///H|/ICT1%20%20harpreet/images/back3.png);
+		color: white;
+		}
+
+</style>   
+</head>
+
+<body>
+<div id="haeader">
+<center><img src="file:///H|/ICT1  harpreet/images/admin logo.jfif" alt="admin logo"><br>This is admin panel. so proceed with caution.
+</center>
+
+</div>
+<div id="sidebar">
+<ul>
+<a ><li><a href="file:///H|/ICT1  harpreet/adddogs.html">Add Dog</a> </li></a>
+<li>Delete dog </li>
+<li> dog information</li>
+</ul>
+
+
+</div>
+<div id="data"><br>
+<center>
+<p><font size="+3">Add Dogs</font></p></center>
+
+
+<meta charset="utf-8">
+<title>add dogs</title>
+<br><br>
+<center><form action="file:///H|/ICT1  harpreet/adddogs.php" method="post">
+  <table>
+  <tr><td>First name:</td>
+  <td><input type="text" name="fname"></td></tr>
+ <tr><td>Last name:</td>
+ <td><input type="text" name="lname"></td></tr>
+  
+   <tr><td>Color:</td>
+  <td><input type="text" name="color"></td></tr>
+  <tr><td>Height:</td>
+  <td><input type="text" name="height"></td></tr>
+  <tr><td>Weight:</td>
+  <td><input type="text" name="weight"></td></tr>
+  <tr><td>DOB:</td>
+  <td><input type="text" name="dob"></td></tr>
+  <tr><td>Gender:</td>
+  <td><input type="text" name="gender"></td></tr>
+   <tr><td colspan="2" align="center">
+   <input type="submit" value="Submit"></td></tr>
+   
+  </table>
+  </form></center>
+</div>
+</body>
+</html>
