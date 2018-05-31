@@ -1,50 +1,24 @@
 <?php
-include_once('config.php');
-if(isset($_POST['submit'])){
- $name=$_POST['name'];
-  $email=$_POST['email'];
+	if(isset($_POST['submit'])){
+		$name=$_POST['name'];
+		$email=$_POST['email'];
+		$phone=$_POST['phone'];
+		$address=$_POST['add'];
+		$subject=$_POST['subject'];
+		$msg=$_POST['msg'];
 
-  //send mail 
- $to='rd.dhillon15@gmail.com';
- $subject='Enquiry';
- $body='<html>
- <body>
- <h3>Feedback</h3>
- <hr>
+		$to='rd.dhillon15@gmail.com'; // Receiver Email ID, Replace with your email ID
+		$subject='Contact Us';
+		$message="Name :".$name."\n"."Email :".$email."\n"."Phone :".$phone."\n"."Address:".$address."\n"."Subject:".$subject."\n"."Message:".$msg;
+		$headers="From: ".$email;
 
- <p> Name : '.$name.'</p>
- <br>
-
- <p> Email : '.$email.'</p>
-
- </body>
-
- </html>';
-
- $headers  ="From:".$name."<".$email.">\r\n";
- $headers .="reply-To:".$email."\r\n";
- $headers .="NINE-Version: 1.0\r\n";
- $headers .="Content-type: text/html; charset=utf-8";
-
-
-//confirmation mail
- $user=$email;
- $usersubject = "Vishnu test";
- $userheaders = "From: rd.dhillon15@gmail.com\n";
- $usermessage = "Thank you for contacting us we will be with you shortly.";
-
-
-//sending process
- $send=mail($to, $subject, $body, $headers);
- $confirm=mail($user, $usersubject, $userheaders,$usermessage );
-
- if($send && $confirm){
-  echo "success";
- }
-
- else{
-  echo "Failed";
- }
-
-}
+		if(mail($to, $subject, $message, $headers)){
+			echo "<h1>Sent Successfully! Thank you"." ".$name.", We will contact you shortly!</h1>";
+			echo file_get_contents("contact_us.html");
+			echo "Sent Successfully! Thank you"." ".$name.", We will contact you shortly!";
+		}
+		else{
+			echo "Something went wrong!";
+		}
+	}
 ?>
